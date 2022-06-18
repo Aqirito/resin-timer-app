@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.resin.timer',
+  appId: 'my.resin.timer',
   appName: 'Resin Timer',
   webDir: 'www',
   bundledWebRuntime: false,
