@@ -1,0 +1,7 @@
+{
+  "name": "resin-timer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
