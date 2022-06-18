@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Resin Timer</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-<ion-button (click)="schedule()" >Schedule</ion-button>
+  <ion-card type="button" mode="ios">
+    <ion-card-header>
+      <ion-card-title>Resin Timer</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card class="main-logo" type="button" mode="ios">
+    <div class="main-logo-wrapper">
+      <img src="assets/genshin_16.png" alt="ekan-logo" width="100%">
+    </div>
+  </ion-card>
+  <ion-card mode="ios">
+    <ion-item>
+      <ion-label position="stacked">How much your Resin you have right now?</ion-label>
+      <ion-input (ionChange)="getResinValue($event)" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Date & Time for your Resin full</ion-label>
+      <ion-input [value]="resin_time_left" readonly="true"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-button style="margin-top: 1rem;" (click)="schedule()" expand="block">Schedule</ion-button>
 </ion-content>
