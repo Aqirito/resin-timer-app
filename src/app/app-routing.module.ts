@@ -4,7 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    redirectTo: 'resin-timer',
+    pathMatch: 'full'
+  },
+  {
+    path: 'resin-timer',
+    loadChildren: () => import('./resin-timer/resin-timer.module').then(m => m.ResinTimerPageModule)
   }
 ];
 @NgModule({
