@@ -47,7 +47,7 @@ export class ResinTimerPage implements OnInit {
 
   async schedule() {
     const toast = await this.toastController.create({
-      header: 'Resin Set',
+      header: 'Timer Set',
       message: `Notification scheduled at ${this.resin_time_left}`,
       duration: 2000,
       position: 'top',
