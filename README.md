@@ -1,5 +1,5 @@
-﻿# resin-timer-app
-an app that you can set resin timer.
+﻿# Resin Timer App (Android)
+an app that can remind you when your resin is fully replenished.
 
 
 # Downloads
