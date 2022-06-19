@@ -10,6 +10,7 @@ import { ToastController } from '@ionic/angular';
 export class ResinTimerPage implements OnInit {
   datetime: any;
   resin_value: number = 0;
+  resin_formula: number = 0;
   resin_time_to_full = new Date();
   resin_time_left: string = '';
 
@@ -31,13 +32,13 @@ export class ResinTimerPage implements OnInit {
 
   getResinValue(event) {
     this.resin_value = event.target.value;
-    const resin_seconds_to_full = this.resin_value * 8 * 60;
-    this.resin_time_to_full = new Date(Date.now() + 1000 * resin_seconds_to_full);
+    this.resin_formula = (160 - this.resin_value) * 8 * 60;
+    this.resin_time_to_full = new Date(Date.now() + 1000 * this.resin_formula);
     const date = new Date(this.resin_time_to_full);
     this.resin_time_left = date.toLocaleDateString('en-US', {
-      weekday: 'short',
+      weekday: 'long',
       year: 'numeric',
-      month: 'short',
+      month: 'long',
       day: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
