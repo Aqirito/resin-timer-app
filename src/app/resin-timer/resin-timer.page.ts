@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { LocalNotifications } from '@capacitor/local-notifications';
 import { ToastController } from '@ionic/angular';
 
@@ -13,6 +13,7 @@ export class ResinTimerPage implements OnInit {
   resin_formula: number = 0;
   resin_time_to_full = new Date();
   resin_time_left: string = '';
+  isContentLoaded: boolean = false;
 
   constructor(
     public toastController: ToastController
@@ -28,6 +29,10 @@ export class ResinTimerPage implements OnInit {
     LocalNotifications.addListener('localNotificationReceived', (notification) => {
       console.log('Notification received:', notification);
     })
+  }
+
+  ionViewDidEnter() {
+    this.isContentLoaded = true;
   }
 
   getResinValue(event) {
