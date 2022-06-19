@@ -2,5 +2,5 @@
 an app that you can set resin timer.
 
 
-#Downloads
+# Downloads
 visit: https://github.com/Aqirito/resin-timer-app/releases
