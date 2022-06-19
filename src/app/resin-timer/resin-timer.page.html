@@ -12,7 +12,7 @@
   <ion-card mode="ios">
     <ion-item *ngIf="isContentLoaded" >
       <ion-label position="stacked">How much your Resin you have right now?</ion-label>
-      <ion-input [autofocus]="true" (ionChange)="getResinValue($event)" inputmode="decimal"></ion-input>
+      <ion-input [autofocus]="true" (ionChange)="getResinValue($event)" inputmode="decimal" [min]="1" [max]="160"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Date & Time for your Resin full</ion-label>
