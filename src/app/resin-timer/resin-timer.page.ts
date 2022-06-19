@@ -65,6 +65,7 @@ export class ResinTimerPage implements OnInit {
         iconColor: '#488AFF',
         schedule: {
           at: this.resin_time_to_full,
+          allowWhileIdle: true
         }
       }]
     });
