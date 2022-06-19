@@ -11,13 +11,18 @@
   </ion-card>
   <ion-card mode="ios">
     <ion-item *ngIf="isContentLoaded" >
-      <ion-label position="stacked">How much your Resin you have right now?</ion-label>
-      <ion-input [autofocus]="true" (ionChange)="getResinValue($event)" inputmode="decimal" [min]="1" [max]="160"></ion-input>
+      <ion-label position="stacked">How much Resin you have right now?</ion-label>
+      <p>{{resin_value}}</p>
+      <ion-range (ionChange)="getResinValue($event)" [value]="resin_value" max="160" step="1" snaps="true" ticks="false" color="secondary">
+        <ion-icon slot="start" name="remove-circle-outline"></ion-icon>
+        <ion-icon slot="end" name="add-circle-outline"></ion-icon>
+      </ion-range>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Date & Time for your Resin full</ion-label>
+      <ion-label position="stacked">Resin fully replenished at:</ion-label>
       <ion-input [value]="resin_time_left" readonly="true"></ion-input>
     </ion-item>
   </ion-card>
   <ion-button style="margin-top: 1rem;" (click)="schedule()" expand="block">set timer</ion-button>
+  <ion-button style="margin-top: 1rem;" (click)="resetResin()" expand="block">clear timer</ion-button>
 </ion-content>
