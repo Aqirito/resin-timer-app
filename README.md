@@ -5,7 +5,7 @@
 an app that can remind you when your resin is fully replenished.
 
 
-![GH Commits](https://img.shields.io/github/commit-activity/w/Aqirito/resin-timer-app?logo=github)
+![GH Commits](https://img.shields.io/github/commit-activity/m/Aqirito/resin-timer-app?logo=github)
 ![GH Downloads](https://img.shields.io/github/downloads/Aqirito/resin-timer-app/total?logo=github)
 
 ## I made this app for fun and hobby. Nothing more...
