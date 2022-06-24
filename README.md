@@ -1,9 +1,9 @@
 ﻿# Resin Timer App (Android)
 an app that can remind you when your resin is fully replenished.
 
-resin timer apps from Aqirito
+## resin timer apps from Aqirito
 
-- this apps is made for fun and nothing more.
+## this apps is made for fun and nothing more.
 - you can check the source code if you having doubt about my apps.
 - I made this open to public. so this is my proof that my apps not having any "Sussy Baka" scripts.
 - I will add some analytics for this apps to track count how many user have used my apps thats all. don't worry I will use Google Analytics so it's safe.
