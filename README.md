@@ -2,7 +2,7 @@
  
 # Aqirito/resin-timer-app
 
-resin timer is an app that can remind you when your resin is fully replenished.
+Resin Timer is an app that can remind you when your resin is fully replenished.
 
 
 ![GH Commits](https://img.shields.io/github/commit-activity/m/Aqirito/resin-timer-app?logo=github)
