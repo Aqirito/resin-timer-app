@@ -14,8 +14,8 @@
       <ion-label position="stacked">How much Resin you have right now?</ion-label>
       <p>{{resin_value}}</p>
       <ion-range (ionChange)="getResinValue($event)" [value]="resin_value" max="160" step="1" snaps="true" ticks="false" color="secondary">
-        <ion-icon slot="start" name="remove-circle-outline"></ion-icon>
-        <ion-icon slot="end" name="add-circle-outline"></ion-icon>
+        <ion-icon class="remove-icon" slot="start" name="remove-circle-outline" (click)="reduceResinValue()"></ion-icon>
+        <ion-icon class="add-icon" slot="end" name="add-circle-outline" (click)="addResinValue()"></ion-icon>
       </ion-range>
     </ion-item>
     <ion-item>

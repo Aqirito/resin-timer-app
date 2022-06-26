@@ -73,6 +73,14 @@ export class ResinTimerPage implements OnInit {
     });
   }
 
+  reduceResinValue() {
+    this.resin_value -= 1;
+  }
+
+  addResinValue() {
+    this.resin_value += 1;
+  }
+
   async schedule() {
     await Storage.set({
       key: 'resin_time_left',
