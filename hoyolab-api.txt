@@ -1,0 +1,5 @@
+search user = https://bbs-api-os.hoyolab.com/community/search/wapi/search?keyword=
+
+get game record by uid = https://bbs-api-os.hoyolab.com/game_record/card/wapi/getGameRecordCard?uid=
+
+get user full info = https://bbs-api-os.hoyolab.com/community/user/wapi/getUserFullInfo?t=
