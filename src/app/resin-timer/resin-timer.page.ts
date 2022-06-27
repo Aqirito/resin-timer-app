@@ -74,11 +74,19 @@ export class ResinTimerPage implements OnInit {
   }
 
   reduceResinValue() {
-    this.resin_value -= 1;
+    if (this.resin_value > 0) {
+      this.resin_value -= 1;
+    } else {
+      return;
+    }
   }
 
   addResinValue() {
-    this.resin_value += 1;
+    if (this.resin_value < 160) {
+      this.resin_value += 1;
+    } else {
+      return;
+    }
   }
 
   async schedule() {
