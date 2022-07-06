@@ -96,17 +96,31 @@ export class ResinTimerPage implements OnInit {
       translucent: true,
     })
     toast.present();
-    await LocalNotifications.schedule({
-      notifications: [{
-        id: 1,
-        title: 'Resin Timer',
-        body: 'Your timer is done!',
-        iconColor: '#488AFF',
-        schedule: {
-          at: this.resin_time_to_full,
-          allowWhileIdle: true
-        }
-      }]
+
+    await LocalNotifications.createChannel({
+      id: 'resin_timer',
+      name: 'Resin Timer',
+      description: 'Resin Timer',
+      importance: 5,
+      visibility: 1,
+      vibration: true,
+      lights: true,
+      sound: 'zhongli.wav',
+    }).then(() => {
+      LocalNotifications.schedule({
+        notifications: [{
+          id: 1,
+          channelId: 'resin_timer',
+          title: 'Resin Timer',
+          body: 'Your resin fully replanished!',
+          iconColor: '#488AFF',
+          schedule: {
+            at: this.resin_time_to_full,
+            allowWhileIdle: true
+          },
+          sound: 'zhongli.wav',
+        }]
+      });
     });
   }
 
